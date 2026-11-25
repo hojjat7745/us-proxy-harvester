@@ -1,0 +1,40 @@
+{
+  "repo_name": "us-proxy-harvester",
+  "schedule_cron": "0 */6 * * *",
+  "target_country": "US",
+  "strict_exit_ip_verification": true,
+  "protocols": [
+    "vless",
+    "vmess",
+    "trojan",
+    "ss",
+    "hysteria2",
+    "tuic"
+  ],
+  "filters": {
+    "max_ping_ms": 300,
+    "min_download_mbps": 10,
+    "speed_test_payload_mb": 2,
+    "sort_by_lowest_ping": true,
+    "max_output_configs": 150
+  },
+  "scanner": {
+    "max_workers": 24,
+    "connect_timeout_sec": 8,
+    "speed_test_url": "https://speed.cloudflare.com/__down?bytes=2097152",
+    "ping_test_url": "https://www.gstatic.com/generate_204",
+    "exit_ip_check_url": "https://ipwho.is/?fields=ip,country_code,city,connection"
+  },
+  "outputs": {
+    "directory": "output",
+    "plain_txt": true,
+    "base64_txt": true,
+    "clash_yaml": true,
+    "split_by_protocol": true
+  },
+  "sources": {
+    "telegram_file": "sources/telegram_channels.txt",
+    "github_file": "sources/github_repos.txt",
+    "telegram_scrape_mode": "public_web_preview_no_login"
+  }
+}
