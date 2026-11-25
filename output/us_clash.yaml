@@ -1,0 +1,222 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  nameserver:
+  - 1.1.1.1
+  - 8.8.8.8
+proxies:
+- name: US-Boston-SS-1 [43ms | 100.21Mbps]
+  type: ss
+  server: 193.151.163.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: US-Boston-SS-2 [49ms | 333.94Mbps]
+  type: ss
+  server: 45.86.51.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: US-Washington-SS-3 [54ms | 175.34Mbps]
+  type: ss
+  server: 172.111.38.72
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: US-Boston-SS-4 [55ms | 287.65Mbps]
+  type: ss
+  server: 185.230.230.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: US-Atlanta-SS-5 [57ms | 80.85Mbps]
+  type: ss
+  server: 149.40.57.138
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: US-Atlanta-SS-6 [58ms | 68.69Mbps]
+  type: ss
+  server: 149.40.57.133
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: US-NewYorkCity-SS-7 [60ms | 74.07Mbps]
+  type: ss
+  server: 38.91.100.39
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: US-Atlanta-SS-8 [142ms | 43.72Mbps]
+  type: ss
+  server: 167.88.63.99
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: US-Miami-SS-9 [145ms | 27.15Mbps]
+  type: ss
+  server: 84.20.27.183
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: US-Atlanta-SS-10 [169ms | 51.51Mbps]
+  type: ss
+  server: 38.22.17.219
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: US-Boston-SS-11 [171ms | 26.82Mbps]
+  type: ss
+  server: 95.215.201.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: US-Atlanta-SS-12 [172ms | 28.58Mbps]
+  type: ss
+  server: 38.121.43.225
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: US-Atlanta-SS-13 [177ms | 46.81Mbps]
+  type: ss
+  server: 172.111.36.123
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: US-Phoenix-SS-14 [185ms | 26.82Mbps]
+  type: ss
+  server: 173.244.56.6
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: US-Atlanta-SS-15 [188ms | 54.26Mbps]
+  type: ss
+  server: 38.22.17.129
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: US-Boston-SS-16 [194ms | 29.84Mbps]
+  type: ss
+  server: 193.151.160.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: US-LosAngeles-SS-17 [194ms | 15.43Mbps]
+  type: ss
+  server: 23.150.152.38
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: US-Atlanta-SS-18 [198ms | 36.04Mbps]
+  type: ss
+  server: 38.121.43.231
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: US-SanJose-SS-19 [217ms | 21.07Mbps]
+  type: ss
+  server: 169.197.142.68
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: US-Miami-SS-20 [232ms | 16.36Mbps]
+  type: ss
+  server: 162.251.62.31
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: US-Miami-SS-21 [234ms | 39.33Mbps]
+  type: ss
+  server: 38.91.107.188
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+proxy-groups:
+- name: US-Select
+  type: select
+  proxies:
+  - US-Fastest-Auto
+  - US-Fallback
+  - US-Boston-SS-1 [43ms | 100.21Mbps]
+  - US-Boston-SS-2 [49ms | 333.94Mbps]
+  - US-Washington-SS-3 [54ms | 175.34Mbps]
+  - US-Boston-SS-4 [55ms | 287.65Mbps]
+  - US-Atlanta-SS-5 [57ms | 80.85Mbps]
+  - US-Atlanta-SS-6 [58ms | 68.69Mbps]
+  - US-NewYorkCity-SS-7 [60ms | 74.07Mbps]
+  - US-Atlanta-SS-8 [142ms | 43.72Mbps]
+  - US-Miami-SS-9 [145ms | 27.15Mbps]
+  - US-Atlanta-SS-10 [169ms | 51.51Mbps]
+  - US-Boston-SS-11 [171ms | 26.82Mbps]
+  - US-Atlanta-SS-12 [172ms | 28.58Mbps]
+  - US-Atlanta-SS-13 [177ms | 46.81Mbps]
+  - US-Phoenix-SS-14 [185ms | 26.82Mbps]
+  - US-Atlanta-SS-15 [188ms | 54.26Mbps]
+  - US-Boston-SS-16 [194ms | 29.84Mbps]
+  - US-LosAngeles-SS-17 [194ms | 15.43Mbps]
+  - US-Atlanta-SS-18 [198ms | 36.04Mbps]
+  - US-SanJose-SS-19 [217ms | 21.07Mbps]
+  - US-Miami-SS-20 [232ms | 16.36Mbps]
+  - US-Miami-SS-21 [234ms | 39.33Mbps]
+- name: US-Fastest-Auto
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies: &id001
+  - US-Boston-SS-1 [43ms | 100.21Mbps]
+  - US-Boston-SS-2 [49ms | 333.94Mbps]
+  - US-Washington-SS-3 [54ms | 175.34Mbps]
+  - US-Boston-SS-4 [55ms | 287.65Mbps]
+  - US-Atlanta-SS-5 [57ms | 80.85Mbps]
+  - US-Atlanta-SS-6 [58ms | 68.69Mbps]
+  - US-NewYorkCity-SS-7 [60ms | 74.07Mbps]
+  - US-Atlanta-SS-8 [142ms | 43.72Mbps]
+  - US-Miami-SS-9 [145ms | 27.15Mbps]
+  - US-Atlanta-SS-10 [169ms | 51.51Mbps]
+  - US-Boston-SS-11 [171ms | 26.82Mbps]
+  - US-Atlanta-SS-12 [172ms | 28.58Mbps]
+  - US-Atlanta-SS-13 [177ms | 46.81Mbps]
+  - US-Phoenix-SS-14 [185ms | 26.82Mbps]
+  - US-Atlanta-SS-15 [188ms | 54.26Mbps]
+  - US-Boston-SS-16 [194ms | 29.84Mbps]
+  - US-LosAngeles-SS-17 [194ms | 15.43Mbps]
+  - US-Atlanta-SS-18 [198ms | 36.04Mbps]
+  - US-SanJose-SS-19 [217ms | 21.07Mbps]
+  - US-Miami-SS-20 [232ms | 16.36Mbps]
+  - US-Miami-SS-21 [234ms | 39.33Mbps]
+- name: US-Fallback
+  type: fallback
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies: *id001
+rules:
+- GEOIP,LAN,DIRECT
+- GEOIP,IR,DIRECT
+- MATCH,US-Select
