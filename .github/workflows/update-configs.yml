@@ -2,7 +2,7 @@ name: Auto-Harvest Verified US Proxy Configs
 
 on:
   schedule:
-    # Runs automatically on schedule (default: every 6 hours)
+    # Runs automatically on schedule (e.g. every 6 hours or every 1 hour)
     - cron: '0 */6 * * *'
   workflow_dispatch:
 
@@ -16,7 +16,7 @@ concurrency:
 jobs:
   harvest-and-scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 40
 
     steps:
       - name: Checkout repository
@@ -33,16 +33,16 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Install Xray-core & sing-box for real tunnel verification
+      - name: Install Xray-core for real tunnel verification
         run: |
           mkdir -p bin
           XRAY_URL="https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip"
-          curl -sSL "$XRAY_URL" -o /tmp/xray.zip
-          unzip -o /tmp/xray.zip xray geoip.dat geosite.dat -d bin/
+          curl -fsSL "$XRAY_URL" -o /tmp/xray.zip
+          unzip -o /tmp/xray.zip -d bin/
           chmod +x bin/xray
           ./bin/xray version
 
-      - name: Run US Proxy Harvester (Scrape -> GeoIP -> Tunnel Ping & Speed Test -> Export)
+      - name: Run US Proxy Harvester (Scrape -> TCP Precheck -> Xray US Ping & Speed Test -> Export)
         env:
           XRAY_BIN: ${{ github.workspace }}/bin/xray
         run: |
@@ -54,6 +54,7 @@ jobs:
         with:
           name: us-configs-report
           path: output/report.json
+          if-no-files-found: ignore
           retention-days: 7
 
       - name: Commit and push verified US configs to public repository

@@ -58,7 +58,7 @@ def _node_to_clash_dict(node: ProxyNode, index: int) -> dict | None:
             "server": node.server,
             "port": node.port,
             "uuid": node.params.get("uuid", ""),
-            "alterId": int(node.params.get("aid", 0)),
+            "alterId": int(node.params.get("aid", 0) or 0),
             "cipher": node.params.get("cipher", "auto"),
             "udp": True,
             "tls": node.params.get("tls") == "tls",
@@ -101,17 +101,14 @@ def export_outputs(nodes: list[ProxyNode], stats: dict, cfg: dict) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
 
     plain_lines = [n.raw_uri for n in nodes]
-    plain_text = "
-".join(plain_lines) + ("
-" if plain_lines else "")
+    plain_text = "\n".join(plain_lines) + ("\n" if plain_lines else "")
 
     if cfg["outputs"].get("plain_txt", True):
         (out_dir / "us_configs.txt").write_text(plain_text, encoding="utf-8")
 
     if cfg["outputs"].get("base64_txt", True):
         encoded = base64.b64encode(plain_text.encode("utf-8")).decode("ascii")
-        (out_dir / "us_configs_base64.txt").write_text(encoded + "
-", encoding="utf-8")
+        (out_dir / "us_configs_base64.txt").write_text(encoded + "\n", encoding="utf-8")
 
     if cfg["outputs"].get("clash_yaml", True):
         proxies = [p for i, n in enumerate(nodes) if (p := _node_to_clash_dict(n, i))]
@@ -166,16 +163,13 @@ def export_outputs(nodes: list[ProxyNode], stats: dict, cfg: dict) -> None:
         for n in nodes:
             grouped.setdefault(n.protocol, []).append(n.raw_uri)
         for proto, uris in grouped.items():
-            (proto_dir / f"{proto}.txt").write_text("
-".join(uris) + "
-", encoding="utf-8")
+            (proto_dir / f"{proto}.txt").write_text("\n".join(uris) + "\n", encoding="utf-8")
 
     report = {
         "updated_at_utc": datetime.now(timezone.utc).isoformat(),
         **stats,
     }
     (out_dir / "report.json").write_text(
-        json.dumps(report, indent=2, ensure_ascii=False) + "
-",
+        json.dumps(report, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )

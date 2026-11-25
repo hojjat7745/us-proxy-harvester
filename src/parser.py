@@ -35,8 +35,16 @@ class ProxyNode:
 
 
 def _b64_decode(data: str) -> str:
-    padded = data.strip() + "=" * ((4 - len(data.strip()) % 4) % 4)
+    clean = data.strip()
+    padded = clean + "=" * ((4 - len(clean) % 4) % 4)
     return base64.urlsafe_b64decode(padded).decode("utf-8", errors="ignore")
+
+
+def _safe_int(val, default: int = 0) -> int:
+    try:
+        return int(str(val).strip())
+    except Exception:
+        return default
 
 
 def parse_single_uri(uri: str) -> ProxyNode | None:
@@ -49,7 +57,7 @@ def parse_single_uri(uri: str) -> ProxyNode | None:
         if scheme == "vmess":
             obj = json.loads(_b64_decode(uri[8:]))
             server = str(obj.get("add", "")).strip()
-            port = int(obj.get("port", 0))
+            port = _safe_int(obj.get("port", 0), 0)
             if not server or port <= 0:
                 return None
             return ProxyNode(
@@ -60,7 +68,7 @@ def parse_single_uri(uri: str) -> ProxyNode | None:
                 raw_uri=uri,
                 params={
                     "uuid": str(obj.get("id", "")),
-                    "aid": int(obj.get("aid") or 0),
+                    "aid": _safe_int(obj.get("aid", 0), 0),
                     "net": str(obj.get("net") or "tcp"),
                     "tls": str(obj.get("tls") or ""),
                     "sni": str(obj.get("sni") or obj.get("host") or ""),
@@ -88,7 +96,7 @@ def parse_single_uri(uri: str) -> ProxyNode | None:
             host_clean = host_part.split("/", 1)[0]
             server, _, port_str = host_clean.rpartition(":")
             server = server.strip("[]")
-            port = int(port_str)
+            port = _safe_int(port_str, 0)
             if not server or port <= 0 or not cipher:
                 return None
             return ProxyNode(

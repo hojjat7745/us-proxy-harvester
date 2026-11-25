@@ -16,7 +16,7 @@ from bs4 import BeautifulSoup
 logger = logging.getLogger("us-harvester.scraper")
 
 URI_PATTERN = re.compile(
-    r"(?:vless|vmess|trojan|ss|ssr|hy2|hysteria2|tuic|wg|wireguard)://[^s<>"'\)\]\\]+",
+    r"(?:vless|vmess|trojan|ss|ssr|hy2|hysteria2|tuic|wg|wireguard)://[^\s<>\"'\)\]]+",
     re.IGNORECASE,
 )
 
@@ -31,7 +31,7 @@ def try_decode_base64_blob(text: str) -> str:
     stripped = text.strip()
     if "://" in stripped or len(stripped) < 32:
         return stripped
-    compact = re.sub(r"s+", "", stripped)
+    compact = re.sub(r"\s+", "", stripped)
     if not re.fullmatch(r"[A-Za-z0-9+/=_-]+", compact):
         return stripped
     try:
@@ -78,19 +78,17 @@ async def fetch_telegram_channel(
             async with session.get(url, timeout=aiohttp.ClientTimeout(total=15)) as resp:
                 if resp.status != 200:
                     return []
-                body = await resp.text()
+                body = await resp.text(errors="ignore")
         except Exception as exc:
             logger.debug("Telegram channel @%s failed: %s", handle, exc)
             return []
 
     soup = BeautifulSoup(body, "html.parser")
     text_blocks = [
-        el.get_text("
-", strip=True)
+        el.get_text("\n", strip=True)
         for el in soup.select(".tgme_widget_message_text, code, pre")
     ]
-    combined = "
-".join(text_blocks)
+    combined = "\n".join(text_blocks)
     return extract_uris_from_text(combined, allowed_protocols)
 
 
@@ -105,7 +103,7 @@ async def fetch_github_source(
             async with session.get(url, timeout=aiohttp.ClientTimeout(total=20)) as resp:
                 if resp.status != 200:
                     return []
-                body = await resp.text()
+                body = await resp.text(errors="ignore")
         except Exception as exc:
             logger.debug("GitHub source %s failed: %s", url, exc)
             return []

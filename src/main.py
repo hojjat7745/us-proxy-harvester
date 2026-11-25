@@ -2,7 +2,7 @@
 Main pipeline entry point for US Proxy Harvester.
 1. Scrapes ~100 login-free public Telegram web channels (t.me/s/<channel>) and public GitHub repos.
 2. Extracts and deduplicates all proxy protocols (vless, vmess, trojan, ss, hy2, tuic, wg).
-3. Performs fast TCP + GeoIP pre-check, then spawns local Xray-core tunnels to verify:
+3. Performs fast TCP pre-check, then spawns local Xray-core tunnels to verify:
    - Real active connectivity
    - Actual exit IP country == US (strict mode)
    - Real HTTP latency <= max_ping_ms

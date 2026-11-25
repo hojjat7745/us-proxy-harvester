@@ -21,9 +21,14 @@
   "scanner": {
     "max_workers": 24,
     "connect_timeout_sec": 8,
+    "max_candidates_to_test": 600,
     "speed_test_url": "https://speed.cloudflare.com/__down?bytes=2097152",
     "ping_test_url": "https://www.gstatic.com/generate_204",
-    "exit_ip_check_url": "https://ipwho.is/?fields=ip,country_code,city,connection"
+    "exit_ip_check_urls": [
+      "https://ipwho.is/?fields=ip,country_code,city",
+      "https://ipinfo.io/json",
+      "https://api.country.is/"
+    ]
   },
   "outputs": {
     "directory": "output",
