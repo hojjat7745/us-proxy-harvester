@@ -10,149 +10,195 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- name: US-Boston-SS-1 [43ms | 100.21Mbps]
+- name: US-Chicago-SS-1 [43ms | 168.7Mbps]
   type: ss
-  server: 193.151.163.18
+  server: 216.106.178.169
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: US-Boston-SS-2 [49ms | 333.94Mbps]
-  type: ss
-  server: 45.86.51.18
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: US-Washington-SS-3 [54ms | 175.34Mbps]
-  type: ss
-  server: 172.111.38.72
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: US-Boston-SS-4 [55ms | 287.65Mbps]
-  type: ss
-  server: 185.230.230.18
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: US-Atlanta-SS-5 [57ms | 80.85Mbps]
-  type: ss
-  server: 149.40.57.138
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: US-Atlanta-SS-6 [58ms | 68.69Mbps]
+- name: US-Atlanta-SS-2 [62ms | 74.63Mbps]
   type: ss
   server: 149.40.57.133
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: US-NewYorkCity-SS-7 [60ms | 74.07Mbps]
+- name: US-Atlanta-SS-3 [66ms | 72.92Mbps]
   type: ss
-  server: 38.91.100.39
+  server: 149.40.57.138
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: US-Atlanta-SS-8 [142ms | 43.72Mbps]
+- name: US-Boston-SS-4 [72ms | 64.1Mbps]
   type: ss
-  server: 167.88.63.99
+  server: 193.151.163.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: US-Miami-SS-9 [145ms | 27.15Mbps]
+- name: US-Warrenton-SS-5 [72ms | 12.77Mbps]
   type: ss
-  server: 84.20.27.183
+  server: 15.204.247.244
+  port: 443
+  cipher: aes-256-gcm
+  password: pKEW8JPByTVTLtM
+  udp: true
+- name: US-Dallas-SS-6 [77ms | 62.28Mbps]
+  type: ss
+  server: 156.146.38.168
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: US-Warrenton-SS-7 [85ms | 20.26Mbps]
+  type: ss
+  server: 15.204.247.244
+  port: 4444
+  cipher: aes-256-gcm
+  password: pKEW8JPByTVTLtM
+  udp: true
+- name: US-Boston-SS-8 [98ms | 76.11Mbps]
+  type: ss
+  server: 185.230.230.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: US-Atlanta-SS-10 [169ms | 51.51Mbps]
+- name: US-Boston-SS-9 [104ms | 41.63Mbps]
   type: ss
-  server: 38.22.17.219
+  server: 45.86.51.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: US-Boston-SS-11 [171ms | 26.82Mbps]
+- name: US-Washington-SS-10 [110ms | 79.45Mbps]
   type: ss
-  server: 95.215.201.18
+  server: 172.111.38.72
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: US-Atlanta-SS-12 [172ms | 28.58Mbps]
+- name: US-SanJose-SS-11 [167ms | 30.78Mbps]
   type: ss
-  server: 38.121.43.225
+  server: 137.184.89.151
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: US-Atlanta-SS-13 [177ms | 46.81Mbps]
-  type: ss
-  server: 172.111.36.123
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: US-Phoenix-SS-14 [185ms | 26.82Mbps]
+- name: US-Phoenix-SS-12 [170ms | 31.22Mbps]
   type: ss
   server: 173.244.56.6
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: US-Atlanta-SS-15 [188ms | 54.26Mbps]
+- name: US-Boston-SS-13 [188ms | 32.47Mbps]
   type: ss
-  server: 38.22.17.129
+  server: 95.215.201.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: US-Boston-SS-16 [194ms | 29.84Mbps]
+- name: US-Phoenix-VMESS-14 [199ms | 28.89Mbps]
+  type: vmess
+  server: 129.146.77.248
+  port: 39495
+  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: ws
+  ws-opts:
+    path: /cctv13.m3u8
+- name: US-Atlanta-SS-15 [213ms | 38.59Mbps]
   type: ss
-  server: 193.151.160.18
+  server: 38.121.43.225
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: US-LosAngeles-SS-17 [194ms | 15.43Mbps]
-  type: ss
-  server: 23.150.152.38
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: US-Atlanta-SS-18 [198ms | 36.04Mbps]
+- name: US-Atlanta-SS-16 [213ms | 38.41Mbps]
   type: ss
   server: 38.121.43.231
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: US-SanJose-SS-19 [217ms | 21.07Mbps]
+- name: US-Atlanta-SS-17 [218ms | 40.34Mbps]
+  type: ss
+  server: 172.111.36.123
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: US-Atlanta-SS-18 [218ms | 34.83Mbps]
+  type: ss
+  server: 38.22.17.219
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: US-SanJose-SS-19 [221ms | 30.43Mbps]
   type: ss
   server: 169.197.142.68
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: US-Miami-SS-20 [232ms | 16.36Mbps]
+- name: US-Atlanta-SS-20 [222ms | 32.91Mbps]
+  type: ss
+  server: 38.22.17.129
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: US-LosAngeles-VLESS-21 [226ms | 28.07Mbps]
+  type: vless
+  server: 179.254.94.184
+  port: 443
+  uuid: 2f12e5b5-6ce7-47ab-88b9-6110c1a3fc60
+  udp: true
+  tls: true
+  network: tcp
+  servername: www.bing.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: q49v36UVMNsNION3nn-cQU6_8VwgM_psm1s5z7XVaWc
+    short-id: e6052385636f0700
+- name: US-Boston-SS-22 [227ms | 40.75Mbps]
+  type: ss
+  server: 193.151.160.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: US-Atlanta-SS-23 [237ms | 32.37Mbps]
+  type: ss
+  server: 167.88.63.99
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: US-Miami-SS-24 [271ms | 37.09Mbps]
   type: ss
   server: 162.251.62.31
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: US-Miami-SS-21 [234ms | 39.33Mbps]
+- name: US-Miami-SS-25 [271ms | 35.28Mbps]
   type: ss
   server: 38.91.107.188
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: US-LosAngeles-SS-26 [294ms | 32.06Mbps]
+  type: ss
+  server: 23.150.152.38
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -163,54 +209,64 @@ proxy-groups:
   proxies:
   - US-Fastest-Auto
   - US-Fallback
-  - US-Boston-SS-1 [43ms | 100.21Mbps]
-  - US-Boston-SS-2 [49ms | 333.94Mbps]
-  - US-Washington-SS-3 [54ms | 175.34Mbps]
-  - US-Boston-SS-4 [55ms | 287.65Mbps]
-  - US-Atlanta-SS-5 [57ms | 80.85Mbps]
-  - US-Atlanta-SS-6 [58ms | 68.69Mbps]
-  - US-NewYorkCity-SS-7 [60ms | 74.07Mbps]
-  - US-Atlanta-SS-8 [142ms | 43.72Mbps]
-  - US-Miami-SS-9 [145ms | 27.15Mbps]
-  - US-Atlanta-SS-10 [169ms | 51.51Mbps]
-  - US-Boston-SS-11 [171ms | 26.82Mbps]
-  - US-Atlanta-SS-12 [172ms | 28.58Mbps]
-  - US-Atlanta-SS-13 [177ms | 46.81Mbps]
-  - US-Phoenix-SS-14 [185ms | 26.82Mbps]
-  - US-Atlanta-SS-15 [188ms | 54.26Mbps]
-  - US-Boston-SS-16 [194ms | 29.84Mbps]
-  - US-LosAngeles-SS-17 [194ms | 15.43Mbps]
-  - US-Atlanta-SS-18 [198ms | 36.04Mbps]
-  - US-SanJose-SS-19 [217ms | 21.07Mbps]
-  - US-Miami-SS-20 [232ms | 16.36Mbps]
-  - US-Miami-SS-21 [234ms | 39.33Mbps]
+  - US-Chicago-SS-1 [43ms | 168.7Mbps]
+  - US-Atlanta-SS-2 [62ms | 74.63Mbps]
+  - US-Atlanta-SS-3 [66ms | 72.92Mbps]
+  - US-Boston-SS-4 [72ms | 64.1Mbps]
+  - US-Warrenton-SS-5 [72ms | 12.77Mbps]
+  - US-Dallas-SS-6 [77ms | 62.28Mbps]
+  - US-Warrenton-SS-7 [85ms | 20.26Mbps]
+  - US-Boston-SS-8 [98ms | 76.11Mbps]
+  - US-Boston-SS-9 [104ms | 41.63Mbps]
+  - US-Washington-SS-10 [110ms | 79.45Mbps]
+  - US-SanJose-SS-11 [167ms | 30.78Mbps]
+  - US-Phoenix-SS-12 [170ms | 31.22Mbps]
+  - US-Boston-SS-13 [188ms | 32.47Mbps]
+  - US-Phoenix-VMESS-14 [199ms | 28.89Mbps]
+  - US-Atlanta-SS-15 [213ms | 38.59Mbps]
+  - US-Atlanta-SS-16 [213ms | 38.41Mbps]
+  - US-Atlanta-SS-17 [218ms | 40.34Mbps]
+  - US-Atlanta-SS-18 [218ms | 34.83Mbps]
+  - US-SanJose-SS-19 [221ms | 30.43Mbps]
+  - US-Atlanta-SS-20 [222ms | 32.91Mbps]
+  - US-LosAngeles-VLESS-21 [226ms | 28.07Mbps]
+  - US-Boston-SS-22 [227ms | 40.75Mbps]
+  - US-Atlanta-SS-23 [237ms | 32.37Mbps]
+  - US-Miami-SS-24 [271ms | 37.09Mbps]
+  - US-Miami-SS-25 [271ms | 35.28Mbps]
+  - US-LosAngeles-SS-26 [294ms | 32.06Mbps]
 - name: US-Fastest-Auto
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
   proxies: &id001
-  - US-Boston-SS-1 [43ms | 100.21Mbps]
-  - US-Boston-SS-2 [49ms | 333.94Mbps]
-  - US-Washington-SS-3 [54ms | 175.34Mbps]
-  - US-Boston-SS-4 [55ms | 287.65Mbps]
-  - US-Atlanta-SS-5 [57ms | 80.85Mbps]
-  - US-Atlanta-SS-6 [58ms | 68.69Mbps]
-  - US-NewYorkCity-SS-7 [60ms | 74.07Mbps]
-  - US-Atlanta-SS-8 [142ms | 43.72Mbps]
-  - US-Miami-SS-9 [145ms | 27.15Mbps]
-  - US-Atlanta-SS-10 [169ms | 51.51Mbps]
-  - US-Boston-SS-11 [171ms | 26.82Mbps]
-  - US-Atlanta-SS-12 [172ms | 28.58Mbps]
-  - US-Atlanta-SS-13 [177ms | 46.81Mbps]
-  - US-Phoenix-SS-14 [185ms | 26.82Mbps]
-  - US-Atlanta-SS-15 [188ms | 54.26Mbps]
-  - US-Boston-SS-16 [194ms | 29.84Mbps]
-  - US-LosAngeles-SS-17 [194ms | 15.43Mbps]
-  - US-Atlanta-SS-18 [198ms | 36.04Mbps]
-  - US-SanJose-SS-19 [217ms | 21.07Mbps]
-  - US-Miami-SS-20 [232ms | 16.36Mbps]
-  - US-Miami-SS-21 [234ms | 39.33Mbps]
+  - US-Chicago-SS-1 [43ms | 168.7Mbps]
+  - US-Atlanta-SS-2 [62ms | 74.63Mbps]
+  - US-Atlanta-SS-3 [66ms | 72.92Mbps]
+  - US-Boston-SS-4 [72ms | 64.1Mbps]
+  - US-Warrenton-SS-5 [72ms | 12.77Mbps]
+  - US-Dallas-SS-6 [77ms | 62.28Mbps]
+  - US-Warrenton-SS-7 [85ms | 20.26Mbps]
+  - US-Boston-SS-8 [98ms | 76.11Mbps]
+  - US-Boston-SS-9 [104ms | 41.63Mbps]
+  - US-Washington-SS-10 [110ms | 79.45Mbps]
+  - US-SanJose-SS-11 [167ms | 30.78Mbps]
+  - US-Phoenix-SS-12 [170ms | 31.22Mbps]
+  - US-Boston-SS-13 [188ms | 32.47Mbps]
+  - US-Phoenix-VMESS-14 [199ms | 28.89Mbps]
+  - US-Atlanta-SS-15 [213ms | 38.59Mbps]
+  - US-Atlanta-SS-16 [213ms | 38.41Mbps]
+  - US-Atlanta-SS-17 [218ms | 40.34Mbps]
+  - US-Atlanta-SS-18 [218ms | 34.83Mbps]
+  - US-SanJose-SS-19 [221ms | 30.43Mbps]
+  - US-Atlanta-SS-20 [222ms | 32.91Mbps]
+  - US-LosAngeles-VLESS-21 [226ms | 28.07Mbps]
+  - US-Boston-SS-22 [227ms | 40.75Mbps]
+  - US-Atlanta-SS-23 [237ms | 32.37Mbps]
+  - US-Miami-SS-24 [271ms | 37.09Mbps]
+  - US-Miami-SS-25 [271ms | 35.28Mbps]
+  - US-LosAngeles-SS-26 [294ms | 32.06Mbps]
 - name: US-Fallback
   type: fallback
   url: https://www.gstatic.com/generate_204

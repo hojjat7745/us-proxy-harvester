@@ -1,10 +1,10 @@
 {
-  "updated_at_utc": "2026-11-25T15:56:12.509997+00:00",
-  "total_candidates": 27888,
+  "updated_at_utc": "2026-11-26T01:14:42.781008+00:00",
+  "total_candidates": 27919,
   "tested_candidates": 600,
-  "verified_us_count": 21,
+  "verified_us_count": 26,
   "max_ping_ms_filter": 300,
   "min_download_mbps_filter": 10,
-  "avg_ping_ms": 142.6,
-  "avg_download_mbps": 75.45
+  "avg_ping_ms": 167.1,
+  "avg_download_mbps": 46.82
 }
